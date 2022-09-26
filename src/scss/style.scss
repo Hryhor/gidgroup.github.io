@@ -1,6 +1,63 @@
 @import "fonts";
 @import "reset.scss";
 @import "base.scss";
+@import "modal.scss";
+
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(19, 19, 19, 0.9);
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    &.active {
+        display: block;
+      }
+    .nav-menu__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 180px;
+        margin-bottom: 40px;
+        .nav-menu__btn {
+            .nav-menu__item {
+                margin-bottom: 50px;
+                text-align: center;
+                .nav-menu__link {
+                    font-weight: 300;
+                    font-size: 48px;
+                    line-height: 56px;
+                    color: #828282;
+                    padding: 20px 77px;
+                    &:hover {
+                        color: #F2F2F2;
+                        border: 1px solid #F2F2F2;
+                        transition: all 1s;
+                    }
+                }
+            }
+        }
+    }
+    .nav-menu__icons {
+        display: flex;
+        justify-content: center;
+        .nav-menu__icons-item {
+            margin-right: 65px;
+            cursor: pointer;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                transform: translateY(-6px);
+                transition: all 1s;
+            }
+        }
+    }
+}
 
 .header {
     background: url('../img/header/header-bg.jpg') no-repeat center;
@@ -16,13 +73,74 @@
         width: 100%;
         align-items: center;
         margin-bottom: 314px;
-        .nav__logo {
-            position: absolute;
-            top: 52px;
-            left: 45%;
-        }
-        .nav__phone {
+        .header__nav-wrap {
+            width: 1760px;
+            display: flex;
             align-items: center;
+            justify-content: space-between;
+            .header__nav-button {
+                cursor: pointer;
+                padding: 0;
+                border: 0;
+                background: transparent;
+
+                position: relative;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                .header__nav-button-icon {
+                    display: block;
+                    position: absolute;
+                    width: 40px;
+                    height: 5px;
+                    background-color:  #BDBDBD;
+                    margin-left: 20px;
+                    z-index: 1000;
+                    &::after,
+                    &:before {
+                    position: absolute;
+                    content: ' ';
+                    width: 40px;
+                    height: 5px;
+                    background-color: #BDBDBD;
+                    transition: transform 0.15s ease-in, top 0.15s ease-in 0.15s;
+                    }
+                    &:before {
+                        left: 0;
+                        top: -10px;
+                    }
+                    &:after {
+                        left: 0;
+                        top: 10px;
+                    }
+                    &.active {
+                        background: transparent;
+                    }
+                    &.active::before {
+                        transform: rotate(45deg);
+                        top: 0;
+                        /*трансофрмация при открывании*/
+                        transition: top 0.15s linear, transform 0.15s ease-in 0.15s;
+                    }
+                    &.active::after {
+                        transform: rotate(-45deg);
+                        top: 0;
+                        transition: top 0.15s linear, transform 0.15s ease-in 0.15s;
+                    }
+                }
+            }
+            .nav__logo {
+                position: absolute;
+                top: 52px;
+                left: 45%;
+                z-index: 1000;
+            }
+            .nav__phone {
+                align-items: center;
+                z-index: 1000;
+            }
         }
     }
     .header__offer {
@@ -374,7 +492,7 @@
                                 height: 10px;
                             }
                         }
-                        a {
+                        .stages__list-link {
                             font-weight: 400;
                             font-size: 14px;
                             line-height: 147.69%;

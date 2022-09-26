@@ -22,11 +22,6 @@ button {
     border: none;
 }
 
-button:active {
-    transform: translateY(-10px);
-    transition:  all .2s;
-}
-
 h2 {
     font-weight: 300;
     font-size: 48px;
@@ -42,3 +37,16 @@ h2 {
         left: 0;
     }
 }
+
+a {
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: translateY(-10px);
+    transition:  all .2s;
+}
+
+.no-scroll {
+    overflow: hidden;
+  }

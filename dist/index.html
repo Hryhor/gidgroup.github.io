@@ -9,23 +9,65 @@
     <body>
         <header class="header">
             <nav class="header__nav">
-
-                <img class="nav__logo" src="img/header/logo.svg" alt="logo">
-                <div class="nav__phone">
-                    <a href="#!"><img src="img/header/phone.svg" alt="call"></a>
+                <div class="container">
+                    <div class="header__nav-wrap">
+                        <button  class="header__nav-button">
+                            <span class="header__nav-button-icon"></span>
+                          </button>
+                        <img class="nav__logo" src="img/header/logo.svg" alt="logo">
+                        <div class="nav__phone">
+                            <a href="#!"><img src="img/header/phone.svg" alt="call"></a>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <div class="container">
                 <div class="header__offer">
                     <h1 class="header__offer-title">Лучшее для лучших</h1>
                     <div class="header__offer-wrap">
-                        <button class="header__offer-btn">Проекты</button>
-                        <button class="header__offer-btn">Расчитать стоимость</button>
+                        <button class="header__offer-btn btn">Проекты</button>
+                        <button class="header__offer-btn btn">Расчитать стоимость</button>
                     </div>
                 </div>
         </div>
 </header>
+
+<div class="nav-menu">
+    <div class="nav-menu__wrap">
+        <ul class="nav-menu__btn">
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#!">Главная</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#!">3D-Дизайн</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#!">Ремонт</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#!">Строительство</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#!">Проекты</a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#!">Ландшафтный дизайн</a></li>
+        </ul>
+    </div>
+    <div class="nav-menu__icons">
+        <a class="nav-menu__icons-item" href="#!"><img src="img/menu/telegram.svg" alt="telegram"></a>
+        <a class="nav-menu__icons-item" href="#!"><img src="img/menu/instagram.svg" alt="instagram"></a>
+        <a class="nav-menu__icons-item" href="#!"><img src="img/menu/facebook.svg" alt="facebook"></a>
+        <a class="nav-menu__icons-item" href="#!"><img src="img/menu/youtube.svg" alt="youtube"></a>
+        <a class="nav-menu__icons-item" href="#!"><img src="img/menu/tik-tok.svg" alt="tik-tok"></a>
+        <a class="nav-menu__icons-item" href="#!"><img src="img/menu/viber.svg" alt="viber"></a>
+    </div>
+</div>
         <main>
+     <!--modal-->
+     <div class="modal__window modal__connect">
+        <div class="modal__block modal__connect-block">
+            <img class="modal__connect-close" src="img/close.svg" alt="close">
+            <div class="modal__connect-wrap">
+                <p>Обратный звонок</p>
+                <form>
+                    <input class="modal__connect-input" placeholder="Ваше имя">
+                    <input class="modal__connect-input" placeholder="Номер телефона">
+                    <button class="modal__connect-btn" type="submit">Позвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
     <section class="benefits">
         <div class="container">
             <div class="benefits__cards-wrap">
@@ -252,7 +294,7 @@
                             </p>
                             <div class="stages__list-checkbox">
                                 <span><img src="img/stages/checkbox.svg" alt="checkbox"></span>
-                                <a href="#!">Оставить заявку</a>
+                                <a class="stages__list-link" href="#!">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -273,7 +315,7 @@
                             </p>
                             <div class="stages__list-checkbox">
                                 <span><img src="img/stages/checkbox.svg" alt="checkbox"></span>
-                                <a href="#!">Оставить заявку</a>
+                                <a class="stages__list-link" href="#!">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -293,7 +335,7 @@
                             </p>
                             <div class="stages__list-checkbox">
                                 <span><img src="img/stages/checkbox.svg" alt="checkbox"></span>
-                                <a href="#!">Оставить заявку</a>
+                                <a class="stages__list-link" href="#!">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -314,7 +356,7 @@
                             </p>
                             <div class="stages__list-checkbox">
                                 <span><img src="img/stages/checkbox.svg" alt="checkbox"></span>
-                                <a href="#!">Оставить заявку</a>
+                                <a class="stages__list-link" href="#!">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -335,7 +377,7 @@
                             </p>
                             <div class="stages__list-checkbox">
                                 <span><img src="img/stages/checkbox.svg" alt="checkbox"></span>
-                                <a href="#!">Оставить заявку</a>
+                                <a class="stages__list-link" href="#!">Оставить заявку</a>
                             </div>
                         </div>
                     </div>
@@ -428,6 +470,21 @@
         </div>
     </section>
 </main>
+        <!--modal-->
+       <div class="modal__window modal__connect">
+        <div class="modal__block modal__connect-block">
+            <img class="modal__connect-close" src="img/close.svg" alt="close">
+            <div class="modal__connect-wrap">
+                <p>Обратный звонок</p>
+                <form>
+                    <input class="modal__connect-input" placeholder="Ваше имя">
+                    <input class="modal__connect-input" placeholder="Номер телефона">
+                    <button class="modal__connect-btn" type="submit">Позвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--modal-->
         <footer class="footer">
     <div class="container">
         <div class="footer__wrap">
