@@ -1,3 +1,7 @@
+@import "fonts";
+@import "reset.scss";
+@import "breackpoints.scss";
+
 *{
     box-sizing: border-box;
   }
@@ -8,7 +12,7 @@ body {
 }
 
 img {
-    font-size: cover;
+    object-fit: cover;
 }
 
 .container {
@@ -36,6 +40,19 @@ h2 {
         border-bottom:  10px solid #000;
         left: 0;
     }
+    @include breackpoint(sm) {
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        &::after {
+            display: block;
+            position: absolute;
+            width: 150px;
+            content: '';
+            border-bottom:  5px solid #000;
+            left: 0;
+        }
+    }
 }
 
 a {
@@ -49,4 +66,13 @@ a {
 
 .no-scroll {
     overflow: hidden;
-  }
+}
+
+._animation {
+    
+}
+
+._active {
+    transform: translateY(0px);
+    opacity: 1;
+}

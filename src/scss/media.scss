@@ -1,0 +1,39 @@
+//@import "style.scss";
+//@import "breackpoints.scss";
+
+@include breackpoint(xxl) {
+    .benefits {
+        .benefits__cards-wrap {
+            grid-template-areas:    "a b"
+                                    "c d";
+            gap: 60px;
+        }
+    }
+}
+
+@include breackpoint(lg) {
+    .benefits {
+        .benefits__cards-wrap {
+            .benefits__card {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+                &:last-child {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+@include breackpoint(md) {
+    .benefits {
+        .benefits__cards-wrap {
+            grid-template-areas:    "a"
+                                    "b"
+                                    "c"
+                                    "d";
+            gap: 60px;
+        }
+    }
+}
